@@ -1,16 +1,16 @@
-# 🎙️ DRAVYA - Voice Emotion Analyzer
+# 🎙️ DRAVYA - Real-Time Voice Emotion Analyzer
 
 ## 📜 Description
 
-**DRAVYA** is a **Voice Emotion Analyzer** that processes audio recordings and determines the emotional tone present in the speech. It utilizes **SpeechBrain**, a state-of-the-art deep learning library for speech processing, to extract emotions from voice signals. This tool is useful for applications like sentiment analysis, AI-driven customer support, and emotional intelligence research.
+**DRAVYA** is a **Real-Time Voice Emotion Analyzer** that processes live speech, transcribes it using OpenAI's **Whisper** model, and determines the emotional tone using **SpeechBrain**. It operates in real-time, automatically detecting speech and stopping when silence is detected, making it ideal for AI-driven sentiment analysis, conversational AI, and human-computer interaction.
 
 ## 🚀 Features
 
-- **Speech-to-Emotion Analysis**: Identifies emotions in voice recordings.
-- **Deep Learning Integration**: Uses a **pre-trained SpeechBrain model** for emotion detection.
-- **Automated Processing**: Accepts an audio file, extracts features, and predicts the emotional state.
-- **Multi-Emotion Classification**: Supports emotions such as *neutral, happy, sad, angry, fearful, and surprised*.
-- **Command-Line Interface**: Simple CLI-based interaction for easy execution.
+- **Live Speech-to-Emotion Analysis**: Detects and analyzes speech in real-time.
+- **Whisper-Based Transcription**: Converts spoken words into accurate text.
+- **Emotion Detection with SpeechBrain**: Identifies emotions like *neutral, happy, sad, angry, fearful, and surprised*.
+- **Automated Silence Detection**: Stops recording after 3 seconds of silence.
+- **Fully Automated Processing**: No need to manually record or upload files.
 
 ## ⚙️ Installation
 
@@ -27,26 +27,28 @@ To set up DRAVYA, follow these steps:
    pip install -r requirements.txt
    ```
 
-3. **Download Required Speech Model**:
-   The program will automatically download the necessary SpeechBrain emotion recognition model during its first run.
+3. **Download Required Speech Models**:
+   The Whisper and SpeechBrain models will be automatically downloaded during the first run.
 
 ## 🖥️ Usage
 
-1. **Provide an Audio File**: Ensure your audio file is in **WAV format**.
-2. **Run the Program**:
+1. **Run the Program**:
    ```bash
-   python dravya.py input_audio.wav
+   python dravya.py
    ```
-3. **View Results**: The detected emotion will be displayed in the console output.
+2. **Start Speaking**: The system will detect your speech and stop automatically after 3 seconds of silence.
+3. **View Results**: The program will display the transcribed text along with the detected emotion.
 
 ### 🌟 Example
 
 ```bash
-python dravya.py test_audio.wav
+python dravya.py
 ```
 **Output:**
 ```
-Predicted Emotion: Happy
+Listening... Speak now.
+Transcribed Text: "I am feeling really great today!"
+Detected Emotion: Happy
 ```
 
 ## 🤝 Contributing
@@ -59,7 +61,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🙌 Acknowledgments
 
-- [SpeechBrain](https://speechbrain.github.io/) - For the powerful pre-trained models for speech processing.
-- [OpenAI](https://openai.com/) - For ongoing inspiration in AI research.
+- [OpenAI Whisper](https://openai.com/research/whisper) - For real-time speech recognition.
+- [SpeechBrain](https://speechbrain.github.io/) - For powerful emotion detection models.
 - Open-source community - For continuous support and innovation in AI-driven solutions.
 
