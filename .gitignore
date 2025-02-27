@@ -1,0 +1,3 @@
+tmpdir/hyperparams.yaml
+/tmpdir
+/wav2vec2_checkpoints
